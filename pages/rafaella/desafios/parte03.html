@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Escreva uma frase</h1>
+        <input type="text" id="frases">
+        <div id="output"></div>
+        <button onclick="confirmar()">Confirmar</button>
+        <a href="../index.html">Voltar</a>
+    </main>
+    <script>
+        function confirmar(){
+            var frasesId = document.querySelector("#frases").value;
+            var output = document.querySelector("#output");
+            var fraseSize = 0;
+            //var letras = frasesId.split("").filter(p => p!= " " && ".");
+            var letras = frasesId.replace(/[^a-zA-Z0-9ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç]/g, '');
+            // A parte do && não funciona e continua contando o ponto como caracter
+            var palavras = frasesId.split(" ");
+            var frase = frasesId.split(".");
+            fraseSize = frase.length;
+            //console.log('frase:' + frase);
+            // if não funcionar e continua contando o ponto final como frase
+            
+            if(frasesId == ""){
+                output.innerHTML = "Escreva algo!";
+                return;
+            }
+            //console.log('fraseSize:'+ frasesId.lastIndexOf("."));
+            if(frasesId.lastIndexOf(".") == frasesId.length - 1){
+                fraseSize--;
+            }
+
+            output.innerHTML = "Este paragrafo tem " + letras.length + " letras, " + palavras.length + " palavras e " + fraseSize + " frases.";
+
+
+            
+        }
+    </script>
+</body>
+</html>

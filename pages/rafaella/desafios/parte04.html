@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Digite os dados do usuario</h1>
+            <h1>Nome</h1>
+            <input type="text" id="nome">
+            <div id="nomeErro"></div>
+            <h1>Idade</h1>
+            <input type="text" id="idade">
+            <div id="idadeErro"></div>
+            <h1>skills</h1>
+            <input type="text" id="skills">
+            <div id="skillsErro"></div>
+            <button onclick="confirmar()">Cadastrar usuario</button>
+        </section>
+        <section>
+            <h1>Resultado:</h1>
+            <div id="nomeDiv"></div>
+            <div id="idadeDiv"></div>
+            <div id="skillsDiv"></div>
+            <a href="../index.html">Voltar</a>
+        </section>
+        <script>
+            function confirmar(){
+                var nome = document.querySelector("#nome").value;
+                var idade = document.querySelector("#idade").value;
+                var skills = document.querySelector("#skills").value;
+                var nomeDiv = document.querySelector("#nomeDiv");
+                var idadeDiv = document.querySelector("#idadeDiv");
+                var skillsDiv = document.querySelector("#skillsDiv");
+
+                // Validar
+                var nomeErro = document.querySelector("#nomeErro");
+                var idadeErro = document.querySelector("#idadeErro");
+                var skillsErro = document.querySelector("#skillsErro");
+                var erro = false;
+                if(nome == ""){
+                    erro = true;
+                    nomeErro.innerHTML = "Digite um nome!";
+                }
+                if(idade == ""){
+                    erro = true;
+                    idadeErro.innerHTML = "Digite uma idade!";
+                }
+                if(skills == ""){
+                    erro = true;
+                    skillsErro.innerHTML = "Digite uma skills!";
+                }
+                if(erro == true){
+                    return;
+                }
+                nomeDiv.innerHTML = "<spam>Nome: </spam>" + nome;
+                idadeDiv.innerHTML = "<spam>Idade: </spam>" + idade;
+                skillsDiv.innerHTML = "<spam>Skills: </spam>" + skills;
+            }
+        </script>
+    </main>
+</body>
+</html>

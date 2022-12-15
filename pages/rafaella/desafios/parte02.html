@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+    <title>Loops</title>
+    <style>
+        .inputErro{
+            color: red;
+        }
+        .inputErro label {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Digite o preço aqui:</h1>
+        <input type="text" id="preco">
+        <div id="preco_erro" class="inputErro"></div>
+        <h1>Digite o valor pago aqui:</h1>
+        <input type="text" id="valor">
+        <div id="valor_erro" class="inputErro"></div>
+        <button onclick="separarMoedas()">Separar Moedas</button>
+        <div id="output"></div>
+        <div id="output_dois"></div>
+        <a href="../index.html">Voltar</a>
+    </main>
+    <script>
+        function separarMoedas(){
+            var output = document.querySelector("#output");
+            var output_dois = document.querySelector("#output_dois")
+            var preco = document.querySelector("#preco").value;
+            var valor = document.querySelector("#valor").value;
+            var troco = valor - preco;
+            var trocoInicial = troco;
+            // moedas
+            var moedas = 0;
+            var umReal = 0;
+            var cinquentaCentavos = 0;
+            var vinteECincoCentavos = 0;
+            var dezCentavos= 0;
+            var cincoCentavos = 0;
+            var umCentavo = 0;
+            // notas
+            var notas = 0;
+            var duzentosReais = 0;
+            var cemReais = 0;
+            var cinquentaReais = 0;
+            var vinteECincoReais = 0;
+            var dezReais= 0;
+            var cincoReais = 0;
+            
+            displayErro("#preco_erro","");
+            displayErro("#valor_erro","");
+            displayErro("#output","");
+            displayErro("#output_dois","");
+
+            // valida o formulário
+            var erro = false;
+            if(preco == ""){
+                erro = true;
+                displayErro("#preco_erro","Informe o preço!");
+            } 
+            if(valor == ""){
+                erro = true;
+                displayErro("#valor_erro","Informe o valor!");
+            }
+            if(troco < 0){
+                erro = true;
+                displayErro("#output","O valor pago não pode ser menor que o preço");
+            }
+            if(erro == true){
+                return;
+            }
+
+            // calcula o troco
+            // while não pode ser !=
+            while(troco > 0){
+                // estava dando erro e teve que arredondar
+                troco = Math.round(troco * 100) / 100;
+                //notas
+                if(troco > 199){
+                    troco -= 200;
+                    duzentosReais += 1;
+                    notas += 1;
+                } else if(troco > 99){
+                    troco -= 100;
+                    cemReais += 1;
+                    notas += 1;
+                } else if(troco > 49){
+                    troco -= 50;
+                    cinquentaReais += 1;
+                    notas += 1;
+                } else if(troco > 24){
+                    troco -= 25;
+                    vinteECincoReais += 1;
+                    notas += 1;
+                } else if(troco > 9){
+                    troco -= 10;
+                    dezReais += 1;
+                    notas += 1;
+                } else if(troco > 4){
+                    troco -= 5;
+                    cincoReais += 1;
+                    notas += 1;
+                }
+                //moedas
+                else if(troco > 0.9){
+                    troco -= 1;
+                    umReal += 1;
+                    moedas += 1;
+                } else if(troco > 0.49){
+                    troco -= 0.5;
+                    cinquentaCentavos += 1;
+                    moedas += 1;
+                } else if(troco > 0.24){
+                    troco -= 0.25;
+                    vinteECincoCentavos += 1;
+                    moedas += 1;
+                } else if(troco > 0.09){
+                    troco -= 0.1;
+                    dezCentavos += 1;
+                    moedas +=1;
+                } else if(troco > 0.04){
+                    troco -= 0.5;
+                    cincoCentavos += 1;
+                    moedas += 1;
+                } else{
+                    troco -= 0.01;
+                    umCentavo += 1;
+                    moedas += 1;
+                }
+            }
+            // mensagem não precisa ser dentro do while
+            output.innerHTML = "(Preço:" + preco +" / Valor:"+ valor + " / Troco:" + trocoInicial + ") <br>" + "Você deve receber/dar: " + notas + " nota(s)" + " e "+ moedas + " moeda(s), sendo: <br>" + "Notas: <br> " + duzentosReais + " de R$ 200 <br> " + cemReais + " de R$ 100 <br> " + cinquentaReais + " de R$ 50 <br> " + vinteECincoReais + " de R$ 25 <br> " + dezReais + " de R$ 10 <br> " + cincoReais + " de R$ 5 <br> ";
+            output_dois.innerHTML = "Moedas: <br> " + umReal + " de R$ 1,00 <br> " + cinquentaCentavos + " de R$ 0,50 <br> " + vinteECincoCentavos + " de R$ 0,25 <br> " + dezCentavos + " de R$ 0,10 <br> " + cincoCentavos + " de R$ 0,05 <br> " + umCentavo + " de R$ 0,01";
+        }
+
+        function displayErro(pSelectors,pValue){
+            pValue = pValue != "" ? "<p><label>Erro:</label> " + pValue + "</p>" : "";
+            /*
+            if(pValue != ""){
+                pValue = "<p><label>Erro:</label> " + pValue + "</p>";
+            }else{
+                pValue  = "";
+            }
+            */
+            document.querySelector(pSelectors).innerHTML = pValue;
+        }
+    </script>
+</body>
+</html>

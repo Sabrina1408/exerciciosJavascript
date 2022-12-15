@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+    <title>Objetos e leitura de resposta</title>
+</head>
+<body>
+    <main>
+        <h1>Qual o seu nome?</h1>
+        <input type="text" id="nome">
+        <h1>Quntos anos você tem?</h1>
+        <input type="text" id="idade">
+        <h1>Qual linguagem de programação você está aprendendo no momento?</h1>
+        <input type="text" id="linguagem">
+        <button onclick="confirmar()">Confirmar</button>
+        <div id="output"></div>
+        <a href="../index.html">Voltar</a>
+    </main>
+    <script>
+        function confirmar(){
+            var nome = document.querySelector("#nome").value;
+            var idade = document.querySelector("#idade").value;
+            var linguagem = document.querySelector("#linguagem").value;
+            var mensagem = "Olá " + nome + ", você tem " + idade + " anos e já está aprendendo " + linguagem + "!";
+            document.querySelector("#output").innerHTML = mensagem;
+        }
+    </script>
+</body>
+</html>
