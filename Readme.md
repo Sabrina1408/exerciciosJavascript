@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/88604193/206493795-cd975139-d60e-4d2a-b412-f04275c81250.png)
+![image](https://user-images.githubusercontent.com/88604193/207749517-72410fdb-e045-4181-8692-bc352a8b5356.png)
+
 <h1>Exercícios de Javascript</h1>
 <p>Fazendo para exercitar javascript.</p>
 <h2>Links</h2>
