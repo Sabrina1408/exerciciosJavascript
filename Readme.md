@@ -2,16 +2,17 @@
 
 <h1>Exercícios de Javascript</h1>
 <p>Fazendo para exercitar javascript.</p>
+<a href="https://sabrina1408.github.io/exerciciosJavascript/" target="_blank">Link do site</a>
 <h2>Desafios</h2>
 <ul>
     <li>Desafios propostos por: 
-        <a href="pages/rafaella/index.html">Rafaella Ballerini</a>
+        <a href="pages/rafaella/index.html" target="_blank">Rafaella Ballerini</a>
     </li>
     <li>Desafios propostos por: 
-        <a href="pages/gabriel/index.html">Gabriel Darezzo</a>
+        <a href="pages/gabriel/index.html" target="_blank">Gabriel Darezzo</a>
     </li>
     <li>Desafios propostos por: 
-        <a href="pages/fernando/index.html">Fernando Leonid</a>
+        <a href="pages/fernando/index.html" target="_blank">Fernando Leonid</a>
     </li>
 </ul>
 <h2>Status</h2>

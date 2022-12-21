@@ -1,0 +1,16 @@
+#beerImg {
+    position: relative;
+    background-color: rgb(233, 128, 128);
+    animation: beerWalking 100s infinite linear;
+    width: 50px;
+}
+
+@keyframes beerWalking {
+    from {
+        margin-left: 0px;
+    }
+
+    to {
+        margin-left: 97%;
+    }
+}
