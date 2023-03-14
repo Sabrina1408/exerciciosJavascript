@@ -1,9 +1,16 @@
 ![image](https://user-images.githubusercontent.com/88604193/207749517-72410fdb-e045-4181-8692-bc352a8b5356.png)
-
-<h1>Exercícios de Javascript</h1>
+<h1>👩🏽‍💻 Exercícios de Javascript</h1>
 <p>Fazendo para exercitar javascript.</p>
-<a href="https://sabrina1408.github.io/exerciciosJavascript/" target="_blank">Link do site</a>
-<h2>Desafios</h2>
+<h2>🎯 Links</h2>
+<ul>
+  <li>
+    <a href="https://sabrina1408.github.io/exerciciosJavascript/" target="_blank">Link do site</a>
+  </li>
+  <li>
+    <a href="https://sabrinaalvesbrito.com.br" target="_blank">Meu portifólio</a>
+  </li>
+</ul>
+<h2>👾 Desafios</h2>
 <ul>
     <li>Desafios propostos por: 
         <a href="pages/rafaella/index.html" target="_blank">Rafaella Ballerini</a>
@@ -15,11 +22,8 @@
         <a href="pages/fernando/index.html" target="_blank">Fernando Leonid</a>
     </li>
 </ul>
-<h2>Status</h2>
-<ul>
-  <li>Fazendo os desafios do Gabriel Darezzo.</li>
-</ul>
-<h1>Aprendizado</h1>
+<h2>👽 Status - Fazendo os desafios do Gabriel Darezzo</h2>
+<h2>🧐 Aprendizado</h2>
 <ul>
   <li>Botar pontos e traços em input do cpf com replace.</li>
   <li>Tirar pontos e traços em input do cpf com replace.</li>
@@ -50,10 +54,4 @@
     </code>
   </li>
   <li>Animação com keyframe</li>
-</ul>
-<h2>Links</h2>
-<ul>
-  <li>
-    <a href="https://sabrinaalves.tk" target="_blank">Meu portfólio</a>
-  </li>
 </ul>
