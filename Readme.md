@@ -34,10 +34,10 @@
   <li><code>!variavel</code> para verificar vazio(””), null, NaN, undefined, false e 0.</li>
   <li><code>!arguments</code> para verificar se o input está vazio.</li>
   <li>Pegar data com: <br> 
-    <code>const timeElapsed = Date.now(); <br>
+    ```const timeElapsed = Date.now(); <br>
     const today = new Date(timeElapsed); <br>
     const year = today.getFullYear();<br>
-    const month = today.getMonth() + 1;</code>
+    const month = today.getMonth() + 1;```
   </li>
   <li>Números aleatórios com: <br>
     <code>Math.floor(Math.random() * n)</code>
@@ -46,12 +46,12 @@
   <li><code>sort()</code> para listar de ordem crescente e decrescente(quando passado com parâmetro b, a e retornando  b-a).</li>
   <li>
     Criar elementos com:
-    <code>
+    ```
       let li40 = document.createElement("li"); <br>
       li40.innerHTML = Number(num40.value); <br>
       document.body.appendChild(li40); <br>
       ul40.appendChild(li40);
-    </code>
+    ```
   </li>
   <li>Animação com keyframe</li>
 </ul>
